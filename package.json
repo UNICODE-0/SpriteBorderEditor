@@ -1,0 +1,10 @@
+{
+  "name": "com.unicode.spriteseditor",
+  "version": "1.0.0",
+  "displayName": "Sprites Editor",
+  "description": "Unity tool for modifying sprites",
+  "unity": "2022.3.12f1", 
+  "author": {
+    "name": "UNICODE-0"
+  }
+}
