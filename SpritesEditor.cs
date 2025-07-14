@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,9 +7,9 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace Game.EditorExtensions
+namespace SpritesEditor
 {
-public class SpriteBorderEditor : EditorWindow
+public class SpritesEditor : EditorWindow
 {
     private const string FOLDER_PATH_KEY    = "target_folder_path";
     private const string PREFIX_FILTER_KEY  = "prefix_filter";
@@ -40,10 +41,10 @@ public class SpriteBorderEditor : EditorWindow
     private GUIStyle _headerStyle;
     private GUIStyle _updatedSpritesStyle;
 
-    [MenuItem("Tools/Sprite Border Editor")]
+    [MenuItem("Tools/Sprites Editor")]
     public static void ShowWindow()
     {
-        GetWindow<SpriteBorderEditor>("Sprite Border Editor");
+        GetWindow<SpritesEditor>("Sprites Editor");
     }
 
     private void OnEnable()
@@ -74,7 +75,7 @@ public class SpriteBorderEditor : EditorWindow
     {
         if (!_guiStylesCreated) CreateGUIStyles();
 
-        GUILayout.Label("Sprite Border Editor", _headerStyle);
+        GUILayout.Label("Sprites Editor", _headerStyle);
 
         GUILayout.Space(10);
 
@@ -122,7 +123,7 @@ public class SpriteBorderEditor : EditorWindow
         }
 
         GUILayout.FlexibleSpace();
-            if (GUILayout.Button("Update Borders", GUILayout.Height(35)))
+            if (GUILayout.Button("Update Sprites", GUILayout.Height(35)))
             {
                 try
                 {
@@ -161,7 +162,7 @@ public class SpriteBorderEditor : EditorWindow
     {
         EditorGUI.BeginDisabledGroup(true);
         EditorGUILayout.BeginHorizontal();
-            GUILayout.Label("UnitMode:", GUILayout.Width(84));
+            GUILayout.Label("Unit Mode:", GUILayout.Width(84));
             _pivotUnitMode = (PivotUnitMode)EditorGUILayout.EnumPopup("", _pivotUnitMode);
         EditorGUILayout.EndHorizontal();
         EditorGUI.EndDisabledGroup();
@@ -278,3 +279,4 @@ public class SpriteBorderEditor : EditorWindow
     }
 }
 }
+#endif
