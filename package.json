@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "displayName": "Sprites Editor",
   "description": "Unity tool for modifying sprites",
-  "unity": "2022.3.12f1", 
+  "unity": "2022.3", 
   "author": {
     "name": "UNICODE-0"
   }
