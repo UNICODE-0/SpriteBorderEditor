@@ -1,3 +1,2 @@
-# SpriteBorderEditor
-A tool for modifying settings of multiple sprites.
-<img width="860" height="491" alt="Безымянный" src="https://github.com/user-attachments/assets/ab706500-2add-4470-9ff7-3e96ef8a3f13" />
+# Sprites Editor
+<img width="846" height="519" alt="image" src="https://github.com/user-attachments/assets/79f419bb-b6ef-4dc0-9d2b-154d24afe04f" />
